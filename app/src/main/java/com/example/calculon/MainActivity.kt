@@ -35,9 +35,11 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.ExposedDropdownMenuAnchorType
 import androidx.compose.runtime.*
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
+import kotlin.time.Duration.Companion.milliseconds
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +52,7 @@ class MainActivity : ComponentActivity() {
                 var mostrarCarga by remember { mutableStateOf(true) }
 
                 LaunchedEffect(Unit) {
-                    kotlinx.coroutines.delay(2500)
+                    kotlinx.coroutines.delay(2500.milliseconds)
                     mostrarCarga = false
                 }
 
@@ -358,7 +360,9 @@ fun SelectorGrupoProfesional(
                     expanded = desplegado
                 )
             },
-            modifier = modifier.menuAnchor().padding(bottom = 16.dp),
+            modifier = modifier.menuAnchor(
+                ExposedDropdownMenuAnchorType.PrimaryNotEditable
+            ).padding(bottom = 16.dp),
             shape = RoundedCornerShape(18.dp)
         )
 
@@ -402,7 +406,9 @@ fun SelectorEstadoCivil(
                     expanded = desplegado
                 )
             },
-            modifier = modifier.menuAnchor().padding(bottom = 16.dp),
+            modifier = modifier.menuAnchor(
+                ExposedDropdownMenuAnchorType.PrimaryNotEditable
+            ).padding(bottom = 16.dp),
             shape = RoundedCornerShape(18.dp)
         )
 
@@ -446,7 +452,8 @@ fun SelectorTipoContrato(
                     expanded = desplegado
                 )
             },
-            modifier = modifier.menuAnchor(),
+            modifier = modifier.menuAnchor(
+                ExposedDropdownMenuAnchorType.PrimaryNotEditable),
             shape = RoundedCornerShape(18.dp)
         )
 

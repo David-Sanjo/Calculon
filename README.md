@@ -7,13 +7,13 @@ El proyecto se ha realizado como actividad formativa del ciclo de Desarrollo de 
 ## 📱 Capturas de pantalla
 
 ### Pantalla de carga
-![Pantalla de carga](screenshots/carga.png)
+<img src="screenshots/carga.png" width="250">
 
 ### Formulario de datos
-![Formulario de datos](screenshots/formulario.png)
+<img src="screenshots/formulario.png" width="250">
 
 ### Resultados del cálculo
-![Resultados del cálculo](screenshots/resultados.png)
+<img src="screenshots/resultados.png" width="250">
 
 ## ✨ Funcionalidades
 
